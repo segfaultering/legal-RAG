@@ -1,131 +1,155 @@
-<p align="center">
-  <a href="https://github.com/AbhaySingh71/AI-Lawyer-RAG-with-Deepseek">
-    <img src="https://img.shields.io/github/stars/AbhaySingh71/AI-Lawyer-RAG-with-Deepseek?style=social" alt="GitHub Stars">
-  </a>
-</p>
-<body>
-    <h1>⚖️ AI Lawyer - RAG with DeepSeek R1</h1>
-     <p>An AI-powered legal chatbot that leverages Retrieval-Augmented Generation (RAG) with <strong>DeepSeek R1</strong> and <strong>Ollama</strong> for advanced legal reasoning.</p>
-    <p>This chatbot is designed to assist users in understanding complex legal documents, retrieving relevant case laws, and providing structured legal insights. By integrating DeepSeek R1, a sophisticated reasoning model, with the RAG framework, AI Lawyer ensures that responses are grounded in factual legal texts, reducing hallucinations and enhancing reliability. The chatbot can process large legal documents, break them down into meaningful sections, and retrieve the most pertinent information to answer user queries accurately.</p>
-    
-   <h2> Features</h2>
-    <ul>
-        <li>📂 Upload and analyze legal documents (PDFs)</li>
-        <li>🔍 Retrieve relevant legal information using FAISS vector database</li>
-        <li>🤖 Answer legal questions using DeepSeek R1 with Groq</li>
-        <li>📜 Summarize legal documents</li>
-        <li>📄 Generate downloadable AI-generated legal reports</li>
-    </ul>
+# AI Lawyer — RAG with DeepSeek R1
 
-
-
-
-https://github.com/user-attachments/assets/003b6247-9faa-4c9a-b9b6-e1311d1d61d5
-
-
-## 📸 Project Demo  
-
-| ![Screenshot 1](utils/photo1.png) | ![Screenshot 2](utils/photo2.png) |  
-|---------------------------------|---------------------------------|  
-| ![Screenshot 3](utils/photo3.png) | ![Screenshot 4](utils/photo4.png) |   
-
----
-    
-  <h2>📁 Project Structure</h2>
-    <pre>
-    ├── frontend.py          # Streamlit UI for AI Lawyer
-    ├── rag_pipeline.py      # Retrieval-Augmented Generation pipeline
-    ├── vector_database.py   # FAISS-based vector database
-    ├── requirements.txt     # Python dependencies
-    └── README.md            # Project documentation
-    </pre>
-    
-  <h2>🛠️ Technologies Used</h2>
-    <ul>
-        <li><strong>DeepSeek R1</strong> - AI model for complex reasoning</li>
-        <li><strong>Ollama</strong> - Local LLM hosting</li>
-        <li><strong>LangChain</strong> - AI framework for LLM applications</li>
-        <li><strong>Streamlit</strong> - Frontend UI for chatbot</li>
-        <li><strong>FAISS</strong> - Vector search for document retrieval</li>
-        <li><strong>pdfplumber</strong> - PDF document processing</li>
-    </ul>
-    
-   <h2>⚙️ Installation & Setup</h2>
-
-<h3>1️⃣ Clone the Repository</h3>
-<pre>
-git clone https://github.com/AbhaySingh71/AI-Lawyer-RAG-with-Deepseek.git
-cd AI-Lawyer-RAG-with-Deepseek
-</pre>
-
-<h3>2️⃣ Set Up the Virtual Environment</h3>
-<pre>
-python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate  # On Windows
-</pre>
-
-<h3>3️⃣ Install Dependencies</h3>
-<pre>
-pip install -r requirements.txt
-</pre>
-
- <h2>Deployment on Streamlit Cloud</h2>
-<h3>1️⃣ Push code to GitHub</h3>
-<pre>
-git add .
-git commit -m "Initial commit"
-git push origin main
-</pre>
-
-<h3>2️⃣ Deploy on Streamlit</h3>
-<ul>
-  <li>Go to <a href="https://share.streamlit.io/">Streamlit Cloud</a> → Deploy a new app.</li>
-  <li>Set <code>GROQ_API_KEY</code> in Streamlit Secrets.</li>
-  <li>Click <strong>Deploy!</strong> 🎉</li>
-</ul>
-
-  <h2>🚀 Usage</h2>
-    <ol>
-        <li>Run the Streamlit application:</li>
-        <pre><code>streamlit run frontend.py</code></pre>
-        <li>Upload a legal document (PDF)</li>
-        <li>Ask legal questions and get AI-powered responses</li>
-        <li>Download AI-generated legal reports</li>
-    </ol>
-    
-   <h2>📜 How It Works</h2>
-    <ol>
-        <li><strong>Upload PDF:</strong> Documents are uploaded and processed.</li>
-        <li><strong>Vector Database:</strong> FAISS indexes the document text.</li>
-        <li><strong>Query Handling:</strong> AI retrieves relevant information.</li>
-        <li><strong>LLM Response:</strong> DeepSeek R1 generates answers.</li>
-        <li><strong>Report Generation:</strong> AI generates a downloadable PDF report.</li>
-    </ol>
-
-## 🌐 Deployed Version
-
-The app is deployed on **Streamlit**! You can check out the live version and explore the analysis on your own:[Streamlit App](https://ai-lawyer-rag-with-deepseek.streamlit.app/).
-
-    
-  <h2>🎯 Future Improvements</h2>
-    <ul>
-        <li>📝 Add support for multiple document formats (DOCX, TXT)</li>
-        <li>⚡ Improve response speed and accuracy</li>
-        <li>🔗 Integrate legal databases for richer context</li>
-    </ul>
-    
- <h2>📬 Contact Us</h2>
-<p>Have questions or need support? Reach out to us at:</p>
-<ul>
-  <li>📧 <a href="mailto:abhaysingh71711@gmail.com">abhaysingh71711@gmail.com</a></li>
-</ul>
+An AI-powered legal chatbot that uses Retrieval-Augmented Generation (RAG) to answer questions about uploaded legal documents. By grounding responses in actual document content, it reduces hallucinations and provides reliable, context-aware legal insights.
 
 ---
 
-<h2>🌐 Connect With Me</h2>
-<p align="center">
-  <a href="https://github.com/abhaysingh71" target="_blank">🐙 GitHub</a> |
-  <a href="https://www.linkedin.com/in/abhay-singh-050a5b293/" target="_blank">🔗 LinkedIn</a> |
-  <a href="https://x.com/AbhaySingh71711" target="_blank">🐦 Twitter</a>
-</p>
+## Features
+
+- Upload and analyze legal documents (PDF)
+- Document summarization
+- Chat interface for asking legal questions
+- Retrieval of relevant document sections via FAISS vector search
+- AI-generated responses powered by DeepSeek R1
+- Downloadable PDF report of the conversation
+
+---
+
+## Technologies
+
+| Layer | Technology |
+|---|---|
+| LLM | DeepSeek R1 Distill Llama 70B (via Groq API) |
+| Embeddings | sentence-transformers/all-MiniLM-L6-v2 |
+| Vector Database | FAISS (CPU) |
+| Orchestration | LangChain |
+| PDF Processing | pdfplumber, pypdfium2 |
+| Frontend | Streamlit |
+| Report Generation | ReportLab |
+
+---
+
+## Project Structure
+
+```
+legal-rag/
+├── frontend.py              # Streamlit UI (primary entry point)
+├── main.py                  # Alternative Streamlit entry point (Ollama-based)
+├── rag_pipeline.py          # RAG pipeline: retrieval, answering, summarization, report generation
+├── vector_database.py       # Document loading, chunking, embedding, FAISS indexing
+├── requirements.txt         # Pinned Python dependencies
+├── pdfs/                   # Directory for uploaded PDF documents
+├── vectorstore/
+│   └── db_faiss/           # Pre-built FAISS vector index
+│       ├── index.faiss
+│       └── index.pkl
+├── utils/                   # Demo screenshots
+└── .devcontainer/
+    └── devcontainer.json   # VS Code Dev Container configuration
+```
+
+---
+
+## Installation
+
+### Prerequisites
+
+- Python 3.11+
+- A [Groq API key](https://console.groq.com/)
+
+### Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/AbhaySingh71/AI-Lawyer-RAG-with-Deepseek.git
+   cd AI-Lawyer-RAG-with-Deepseek
+   ```
+
+2. Create and activate a virtual environment:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # macOS/Linux
+   venv\Scripts\activate     # Windows
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Set your Groq API key as an environment variable:
+
+   ```bash
+   export GROQ_API_KEY="your-api-key-here"  # macOS/Linux
+   set GROQ_API_KEY="your-api-key-here"     # Windows
+   ```
+
+   Alternatively, create a `.env` file in the project root:
+
+   ```
+   GROQ_API_KEY=your-api-key-here
+   ```
+
+---
+
+## Usage
+
+Run the Streamlit application:
+
+```bash
+streamlit run frontend.py
+```
+
+The app will open in your browser at `http://localhost:8501`.
+
+### Workflow
+
+1. **Upload a PDF** — Click the file uploader and select a legal document.
+2. **Summarize** — Click "Summarize Document" to get a concise overview.
+3. **Ask questions** — Type your legal question in the text area and click "Ask AI Lawyer".
+4. **Download report** — After a conversation, click "Download Report" to export the Q&A history as a PDF.
+
+---
+
+## How It Works
+
+1. **Upload** — The PDF is saved to the `pdfs/` directory.
+2. **Extract** — `pdfplumber` extracts text from the document.
+3. **Chunk** — Text is split into 1000-character chunks with 200-character overlap using `RecursiveCharacterTextSplitter`.
+4. **Embed** — Chunks are embedded using `sentence-transformers/all-MiniLM-L6-v2`.
+5. **Index** — Embeddings are stored in a FAISS vector index and saved to `vectorstore/db_faiss/`.
+6. **Retrieve** — On query, FAISS performs similarity search (k=5) and filters results by source filename.
+7. **Generate** — Retrieved context is passed to DeepSeek R1 (via Groq) with a prompt that enforces strict grounding in the provided context.
+8. **Report** — The conversation history can be exported as a formatted PDF via ReportLab.
+
+---
+
+## Deployment
+
+### Streamlit Cloud
+
+1. Push the code to a GitHub repository.
+2. Go to [Streamlit Cloud](https://share.streamlit.io/) and click "Deploy a new app".
+3. Set `GROQ_API_KEY` in Streamlit Secrets.
+4. Click **Deploy**.
+
+### Dev Container (VS Code)
+
+The included `.devcontainer/devcontainer.json` provides a pre-configured development environment. Open the project in VS Code and select "Reopen in Container" to use it.
+
+---
+
+## Environment Variables
+
+| Variable | Required | Description |
+|---|---|---|
+| `GROQ_API_KEY` | Yes | API key for Groq (used by LangChain's `ChatGroq`) |
+
+---
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
